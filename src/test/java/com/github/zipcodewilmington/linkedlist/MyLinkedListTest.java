@@ -28,7 +28,7 @@ class MyLinkedListTest {
     @Test
     void size() {
         MyLinkedList list = new MyLinkedList("A");
-        int expected = 1;
+        int expected = 0;
         int actual = list.size();
 
         Assert.assertEquals(expected, actual);
@@ -39,9 +39,33 @@ class MyLinkedListTest {
         MyLinkedList list = new MyLinkedList("A");
         list.add("Apple",1);
 
-        int expected = 2;
+        int expected = 1;
         int actual = list.size();
 
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    void get() {
+        MyLinkedList list = new MyLinkedList("A");
+        list.add("Apple",1);
+
+        MyNode expected = new MyNode("Apple",1);
+        MyNode actual = list.get("Apple");
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    void isEmpty() {
+        MyLinkedList list = new MyLinkedList("A");
+        Assert.assertTrue(list.isEmpty());
+    }
+
+    @Test
+    void isEmpty2() {
+        MyLinkedList list = new MyLinkedList("A");
+        list.add("Apple", 1);
+        Assert.assertFalse(list.isEmpty());
     }
 }
