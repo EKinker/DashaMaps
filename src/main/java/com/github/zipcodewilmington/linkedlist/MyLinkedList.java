@@ -31,8 +31,16 @@ public class MyLinkedList {
         current.setNext(new MyNode(key, value));
     }
 
-    public void remove(int index){
-
+    public Integer remove(String key){
+        MyNode previous = head;
+        MyNode current =head.getNext();
+        while(current != null && !current.getData().getKey().equals(key)){
+            previous = current;
+            current = current.getNext();
+        }
+        if(current == null) return null;
+        previous.setNext(current.getNext());
+        return current.getData().getValue();
     }
 
     public int size(){

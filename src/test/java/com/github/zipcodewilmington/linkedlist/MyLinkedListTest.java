@@ -23,6 +23,16 @@ class MyLinkedListTest {
 
     @Test
     void remove() {
+        MyLinkedList list = new MyLinkedList("A");
+        list.add("Apple", 1);
+        list.add("Arrow", 2);
+        list.add("Amelia", 3);
+        Assert.assertEquals(3, list.size());
+
+        Integer actual = list.remove("Arrow");
+        Assert.assertEquals(2, list.size());
+        Assert.assertEquals((Integer) 2, actual);
+
     }
 
     @Test
