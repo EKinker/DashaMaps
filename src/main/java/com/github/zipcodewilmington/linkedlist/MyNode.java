@@ -40,9 +40,6 @@ public class MyNode {
 
     @Override
     public String toString() {
-        return "MyNode{" +
-                "data=" + data +
-                ", next=" + next +
-                '}';
+       return data.toString();
     }
 }

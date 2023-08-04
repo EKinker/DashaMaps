@@ -49,7 +49,7 @@ class MyPairTest {
     @Test
     void testToString() {
         MyPair mp = new MyPair("a",1);
-        String expected = "MyPair{key='a', value=1}";
+        String expected = "{a, 1}";
         String actual = mp.toString();
 
         Assert.assertEquals(expected, actual);

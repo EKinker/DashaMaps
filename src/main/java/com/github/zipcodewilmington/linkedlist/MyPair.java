@@ -42,9 +42,6 @@ public class MyPair {
 
     @Override
     public String toString() {
-        return "MyPair{" +
-                "key='" + key + '\'' +
-                ", value=" + value +
-                '}';
+        return "{" +key +", " + value + '}';
     }
 }

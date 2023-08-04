@@ -29,7 +29,7 @@ class MyNodeTest {
     @Test
     void testToString() {
         MyNode node = new MyNode("Zaphod", 42);
-        String expected = "MyNode{data=MyPair{key='Zaphod', value=42}, next=null}";
+        String expected = "{Zaphod, 42}";
 
         String actual = node.toString();
         Assert.assertEquals(expected, actual);
