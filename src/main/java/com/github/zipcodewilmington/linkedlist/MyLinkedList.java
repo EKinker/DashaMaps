@@ -53,4 +53,16 @@ public class MyLinkedList {
         return counter;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        MyNode current =head;
+        while(current!=null){
+            sb.append((current)+" ");
+            current = current.getNext();
+        }
+
+
+        return sb.toString();
+    }
 }

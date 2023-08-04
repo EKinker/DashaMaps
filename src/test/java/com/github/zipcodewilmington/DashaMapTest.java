@@ -1,5 +1,6 @@
 package com.github.zipcodewilmington;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -22,6 +23,14 @@ public class DashaMapTest {
 
     @Test
     void isEmpty() {
+        DashaMap dm = new DashaMap();
+        Assert.assertTrue(dm.isEmpty());
+    }
+
+    @Test
+    void isNotEmpty(){
+        DashaMap dm = new DashaMap();
+
     }
 
     @Test

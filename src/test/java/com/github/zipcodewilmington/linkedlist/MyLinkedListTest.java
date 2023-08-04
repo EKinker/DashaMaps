@@ -78,4 +78,13 @@ class MyLinkedListTest {
         list.add("Apple", 1);
         Assert.assertFalse(list.isEmpty());
     }
+
+    @Test
+    void testToString() {
+        MyLinkedList list = new MyLinkedList("a");
+        list.add("Apple",1);
+        list.add("Arrow", 2);
+        list.add("Asymptomatic", 3);
+        System.out.println(list.toString());
+    }
 }

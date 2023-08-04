@@ -3,6 +3,7 @@ package com.github.zipcodewilmington;
 import com.github.zipcodewilmington.linkedlist.MyLinkedList;
 
 import java.util.Arrays;
+import java.util.LinkedList;
 
 /**
  * @author xtofer
@@ -20,8 +21,6 @@ public class DashaMap implements HashMapX{
             dashamap[i]= new MyLinkedList(Character.toString(letter));
             letter++;
         }
-
-
     }
 
     @Override
@@ -41,7 +40,12 @@ public class DashaMap implements HashMapX{
 
     @Override
     public boolean isEmpty() {
-        return false;
+        for (MyLinkedList ll: dashamap){
+            if (!ll.isEmpty()){
+                return false;
+            }
+        }
+        return true;
     }
 
     @Override
@@ -58,7 +62,7 @@ public class DashaMap implements HashMapX{
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (MyLinkedList list : dashamap){
-            sb.append((list.getHead().toString())+"\n");
+            sb.append((list.toString())+"\n");
 
         }
 
